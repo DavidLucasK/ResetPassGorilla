@@ -48,7 +48,7 @@ async function handleResetPassword(event) {
     }
 
     try {
-        const response = await fetch('https://pontogorillaback.vercel.app/api/auth/reset', {
+        const response = await fetch('https://resetpassgorilla.vercel.app/api/auth/reset', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -57,6 +57,8 @@ async function handleResetPassword(event) {
         });
 
         const data = await response.json();
+
+        console.log("")
 
         if (response.ok) {
             document.getElementById('result').textContent = 'Senha redefinida com sucesso!';
