@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://pontogorillaback.vercel.app;">
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="./nome_gorilla_white.png" width="200" alt="Logo_Gorilla">
+        </div>
+        <h1>Redefinir Senha</h1>
+        <form id="reset-form" action="/reset" method="POST">
+            <input type="hidden" name="email" id="emailInput">
+            <input type="hidden" name="token" id="tokenInput">
+    
+            <div class="reset-password">
+                <div class="field">
+                    <input type="password" placeholder="Nova Senha" required id="newPassword">
+                </div>
+                <div class="field">
+                    <input type="password" placeholder="Confirme a Nova Senha" required id="confirmPassword">
+                </div>
+                <div class="mostrarSenha" id="togglePasswords">Mostrar Senha</div>
+                <button type="submit" class="reset" id="resetPasswordBtn">Redefinir Senha</button>
+            </div>
+            <div id="result"></div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
