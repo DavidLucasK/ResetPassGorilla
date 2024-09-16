@@ -48,7 +48,7 @@ async function handleResetPassword(event) {
     }
 
     try {
-        const response = await fetch('https://resetpassgorilla.vercel.app/api/auth/reset', {
+        const response = await fetch('https://pontogorillaback.vercel.app/api/auth/reset', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
