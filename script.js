@@ -61,7 +61,7 @@ async function handleResetPassword(event) {
         console.log("")
 
         if (response.ok) {
-            document.getElementById('result').textContent = 'Senha redefinida com sucesso!';
+            document.getElementById('result').textContent = 'Senha redefinida com sucesso!\nVolte ao Aplicativo';
         } else {
             document.getElementById('result').textContent = data.message || 'Erro ao redefinir a senha.';
         }
